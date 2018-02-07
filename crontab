@@ -1,0 +1,4 @@
+# m h  dom mon dow   command
+
+# run cowslack each day at 730am
+30 7 * * * bash /usr/local/bin/cowslack.sh
