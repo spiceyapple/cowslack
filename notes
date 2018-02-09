@@ -1,0 +1,49 @@
+from slack
+
+administration > manage apps > build > start building
+
+give the app a name, select which team it can post to and select to create the app
+
+select incoming webhooks and activate
+
+scroll down, select add new webhook to werkspace
+
+select a chanel & authorise
+
+
+curl example 
+
+curl -X POST --data-urlencode "payload={\"channel\": \"#general\", \"username\": \"coay\", \"text\": \"$(fortune)\", \"icon_emoji\": \":cow:\"}" https://hooks.slack.com/services/YOUR/WEBHOOK/URL
+
+
+
+
+
+
+
+----------------------------------
+
+nano cowslack.sh
+
+
+#!/bin/bash
+
+PATH=/usr/local/bin:/bin RESTO F PATH AS APPROPORIATE
+
+curl -X POST --data-urlencode payload blah blah
+
+
+
+
+
+chmod u+x cowslack.sh
+
+cp cowslack /usr/local/bin/
+
+sudo crontab -e
+
+add a line to cron with the schedule for your command and the path to your command
+
+
+30 7 * * * * /usr/local/hin/cowslack.sh
+
